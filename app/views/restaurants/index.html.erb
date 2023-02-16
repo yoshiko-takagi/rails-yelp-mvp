@@ -1,0 +1,15 @@
+<div class="container mt-3">
+  <h1>Restaurants Top</h1>
+
+  <%= link_to new_restaurant_path, class: 'text-dark text-decoration-none' do %>
+    <i class="fa-solid fa-plus"></i>
+  <% end %>
+
+  <div class="cards">
+  <% @restaurants.each do |restaurant| %>
+    <li class="list-group-item">
+      <%= link_to restaurant.name, restaurant_path(restaurant) %>
+    </li>
+  <% end %>
+  </div>
+</div>

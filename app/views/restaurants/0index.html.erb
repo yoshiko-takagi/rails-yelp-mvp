@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Restaurants Top</h1>
+
+    <%= link_to new_restaurant_path, do %>
+      <i class="fas fa-plus-square btn-light"></i>
+    <% end %>
+  </div>
+
+  <div class="cards">
+    <% @restaurants.each do |restaurant| %>
+      <%= render restaurant %>
+      <p>
+        <%= link_to "Show this restaurant", restaurant %>
+      </p>
+    <% end %>
+  </div>
+</div>
